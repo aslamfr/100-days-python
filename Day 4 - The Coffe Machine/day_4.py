@@ -25,20 +25,18 @@ while flavor != "exit":
   if flavor == "espresso":
     money()
     print("Your money is : ${}".format(total))
-    if total > 1.50 :
-      w = water - 50
-      c = coffe - 18
-      water = w
-      coffe = c
+    if total > 1.50 and water > 50 and coffe > 18 :
+      water = water - 50
+      coffe = coffe - 18
       total = total - 1.50
       print("Your change is : ${}".format(total))
       print("Please enjoy your espresso \n")
     else :
-      print("Your money is not enough, money refunded.")
+      print("Your money is not enough/resource is not enough, money refunded.")
   elif flavor == "latte":
     money()
     print("Your money is : ${}".format(total))
-    if total > 2.50 :
+    if total > 2.50 and water > 200 and coffe > 24 and milk > 150 :
       water = water - 200
       coffe = coffe - 24
       milk = milk - 150
@@ -50,7 +48,7 @@ while flavor != "exit":
   elif flavor == "cappuccino":
     money()
     print("Your money is : ${:.2f}".format(total))
-    if total > 3:
+    if total > 3 and water > 250 and coffe > 24 and milk > 100 :
       water = water - 250 
       coffe = coffe - 24
       milk = milk - 100
