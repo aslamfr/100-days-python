@@ -44,7 +44,7 @@ while flavor != "exit":
       print("Your change is : ${:.2f}".format(total))
       print("Please enjoy your latte \n")
     else :
-      print("Your money is not enough, money refunded.")
+      print("Your money is not enough/resource is not enough, money refunded.")
   elif flavor == "cappuccino":
     money()
     print("Your money is : ${:.2f}".format(total))
@@ -56,7 +56,7 @@ while flavor != "exit":
       print("Your change is : ${:.2f}".format(total))
       print("Please enjoy your cappuccino \n")
     else :
-      print("Your money is not enough, money refunded.")
+      print("Your money is not enough/resource is not enough, money refunded.")
   elif flavor == "report":
     report(total)
   elif flavor == "refil":
